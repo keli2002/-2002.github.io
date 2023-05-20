@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>猫猫网</title>
+	<style>
+		
+		header {
+			background-color: lightpink;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		
+		nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 20px;
+		}
+
+		nav a {
+			color: #000;
+			text-decoration: none;
+			margin: 0 10px
+		}
+
+		
+		#slider {
+			position: relative;
+			width: 100%;
+			height: 500px;
+			overflow: hidden;
+		}
+
+		#slider img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: 0;
+			transition: all 1s ease-in-out;
+		}
+
+		#slider img.active {
+			opacity: 1;
+		}
+
+		footer {
+			background-color:lightpink;
+			color: #000;
+			padding: 20px;
+			text-align: center;
+			margin-top: 20px;
+		}
+      
+		.video-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 20px;
+		}
+
+		.video-card {
+			width: 300px;
+			height: 100%;
+			margin: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,.3);
+			overflow: hidden;
+		}
+
+		.video-card img {
+			width: 100%;
+			height: 180px;
+			object-fit: cover;
+			display: block;
+  			transition: transform 0.3s ease-in-out;
+		}
+		.video-card:hover img {
+			transform: scale(1.2);
+		}
+
+
+		.video-card h2 {
+			font-size: 24px;
+			margin: 20px;
+		}
+
+		.video-card p {
+			font-size: 16px;
+			margin: 10px;
+		}
+
+		.video-card a {
+			display: block;
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			text-decoration: none;
+			transition: all .3s ease-in-out;
+		}
+		.video-card a:hover {
+			background-color: #555;
+		}
+		a{
+			color: #fff;
+		}
+		a:hover{
+			color: cornflowerblue;
+		}
+		.dropdown {
+		position: relative;
+		}
+
+		.dropdown-content {
+		display: none;
+		position: absolute;
+		z-index: 1;
+		}
+
+		.dropdown:hover .dropdown-content {
+		display: block;
+		}
+
+		.dropdown-content ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background-color: lightpink;
+		width: 160px;
+		}
+
+		.dropdown-content li a {
+		display: block;
+		padding: 10px;
+		text-decoration: none;
+		color: #000;
+		}
+
+		.dropdown-content li a:hover {
+		background-color: #fff;
+		color: cornflowerblue;
+		}
+		.denglu{
+			width: 95px;
+			height: 35px;
+			background-color: pink;
+			border: 2px solid pink;
+			border-radius: 20px;
+			padding: 10px;
+		}
+		.box{
+			background-image: linear-gradient(to right, #f2f2f2, #e6e6e6);
+		}
+		.hover-image {
+		display: inline-block;
+		position: relative;
+		}
+
+		.hover-image .image {
+			display: none;
+			position: absolute;
+			top:10%;
+			left: 150px;
+			width: 400px;
+			height: 200px;
+		}
+		.hover-image:hover .image {
+			display: block;
+		}
+       
+	</style>
+</head>
+<body class="box">
+	<header>
+		<h1>猫猫网</h1>
+	</header>
+	<nav>
+		<a>首页</a>
+		<li class="dropdown">
+			<a href="gengduo.html">更多</a>
+			<div class="dropdown-content">
+			  <ul>
+				<li><a href="http://www.panggua.cc/">流浪猫救助计划</a></li>
+				<li><a href="https://isite.baidu.com/site/wjz35v1v/1a85434a-effb-453e-8814-cab0285d89f3?fid=rjczrH0YnHRknj63PjTLnW6kn-tkrj0kg1D&ch=4&ch=4&bd_vid=rjczrH0YnHRknj63PjTLnW6kn-tkrj0kg17xnH0sg1wxPWm1PWm4nj6zn1b&bd_bxst=EiaK10_eCJIVnLcFKsDD0AuSLsZq4Rmu060000Ww_nrCkEH2s60000000000000wXQ_cFqUui0D000K5Gtu1js000Kyj77Vp0000D0KI0fWw_nrC1TyvYzXekoWRcPAsslWPkUUHQIgi_o8dEUpJVTHjJavz8toNz2ALO_ekVqD00FUIDwf&bd_vid=6759365511847696385">寻猫启事</a></li>
+				<li><a href="https://www.epet.com/">宠物商城</a></li>
+				<li><a class="hover-image">美短猫<img src="img/meiduan.jpg" alt="图片" class="image"></a></li>
+				<li><a class="hover-image">波斯猫<img src="img/bosimao.jpg" alt="图片" class="image"></a></li>
+				<li><a class="hover-image">折耳猫（请勿购买）<img src="img/zheermao.jpg" alt="图片" class="image"></a></li>
+				<li><a class="hover-image">黄冈职业技术学院<img src="img/hgpu.jpg" alt="图片" class="image"></a></li>
+			  </ul>
+			</div>
+		  </li>
+		<a href="lianxi.html">联系我们</a>
+        <a href="guanyu.html">关于我们</a>
+        <div class="denglu"><a href="denglu.html">登录/注册</a></div>
+	</nav>
+
+	<div id="slider">
+		<img src="img/1.jpg" class="active">
+		<img src="img/2.jpg">
+		<img src="img/3.jpg">
+		<img src="img/4.jpg">
+		<img src="img/5.jpg">
+		<img src="img/6.jpg">
+	</div>
+    	<div class="video-list">
+            <div class="video-card">
+                <img src="img/lihuamao.jpg">
+                <h2>狸花猫</h2>
+                <p>狸花猫（英文名：Dragon Li）是食肉目猫科动物。
+					狸花猫肌肉发达，四肢长短适中，粗壮有力而敏捷；尾长略短于身长，双眼大而有神微向上吊，额头、下颌棱角分明。
+					性格独立，爱好运动，对主人有极大的依赖性，主要以干净的水及猫粮为食。
+					狸花猫需要定期剪指甲、清洁耳部以及刷牙以降低患病风险。狸猫换太子中的“狸猫”，就是中国狸花猫</p>
+                <a href="https://baike.sogou.com/v50506205.htm">查看详情</a>
+            </div>
+            <div class="video-card">
+                <img src="img/jumao.jpg">
+                <h2>橘猫</h2>
+                <p>橘猫（orange cats）是家猫常见的一种毛色，也叫橘子猫、桔猫，
+					普遍存在于混种猫和不具独特规定毛色的注册纯种猫种，与品种无关，
+					与被毛基因有关。国内大部分橘猫都是狸花猫，因此也称为橘狸、黄狸。</p>
+                <a href="https://www.zhihu.com/question/394871736">查看详情</a>
+            </div>
+            <div class="video-card">
+                <img src="img/buoumao.jpg">
+                <h2>布偶猫</h2>
+                <p>布偶猫（Ragdoll）又称布拉多尔猫，是猫中体形和体重较大的一种。布偶猫于1960年开始繁育，
+					1965年在美国获得认可。布偶猫头呈V形，眼大而圆，被毛丰厚，四肢粗大，身体柔软，多为三色或双色猫。
+					布偶猫全身非常松弛，像软绵绵的布偶一样。它性格温顺、恬静，对人非常友善，对疼痛的忍受性相当强，
+					常被误认为缺乏疼痛感。它非常能容忍孩子的玩耍，也因此被称为布偶猫，是非常理想的家养宠物。</p>
+                <a href="https://baike.baidu.com/item/%E5%B8%83%E5%81%B6%E7%8C%AB/642121">查看详情</a>
+            </div>
+            <div class="video-card">
+                <img src="img/napolunaijiaomao.jpg">
+                <h2>拿破仑矮脚猫</h2>
+                <p>这种可爱的猫咪就是拿破仑猫了，它们有着像波斯猫一样华丽的长毛，再配上特有的面部轮廓，
+					看起来威风凛凛，却有着小短腿。不知道当初给这种猫咪命名为“拿破仑”，是不是想到了拿破仑那尴尬的身高呢？
+					虽然有这样霸气的名字，拿破仑猫其实是一种完全由人工培育得到的猫咪，
+					是由波斯猫和曼基康猫咪培育而来的，也可以称它们是长毛曼基康。</p>
+                <a href="https://zhuanlan.zhihu.com/p/319665364">查看详情</a>
+            </div>
+            <div class="video-card">
+                <img src="img/lanmao.jpg">
+                <h2>蓝猫</h2>
+                <p>英国短毛猫是传统英国本地猫纯种版本，具有鲜明的矮胖的身体，
+					浓密的毛发和广阔的脸。早期中国人称之为英短蓝猫，学名应该称为英国蓝色短毛猫。
+					最熟悉的彩色变种是“英国蓝”，一个坚实的蓝灰色的外衣和铜颜色的眼睛，
+					但该品种也已在范围广泛的其他颜色和图案。最典型的特征是此猫有五短，
+					即：毛短、身材短、尾巴短、四肢短、耳朵短。</p>
+                <a href="https://zhuanlan.zhihu.com/p/47099920">查看详情</a>
+            </div>
+            <div class="video-card">
+                <img src="img/shizimao.jpg">
+                <h2>狮子猫</h2>
+                <p>临清狮猫头大；耳朵短小；全身长毛，颈部、背部的毛可长达4~5cm,这也正是得此名的缘由。
+					依照毛色可分为白猫、黑狮猫、鞭打绣球、花狮猫四种。山东狮子猫眼睛的颜色分为双眼蓝、双眼黄及鸳鸯眼。				
+					纯种山东狮子猫为白色长毛，颈、背部毛长达4-5厘米，站姿犹如狮子。也有黑白相间毛色的品种，但以纯白的较为珍贵。
+					山东狮子猫身体强壮、抗病力强、耐寒冷、善于捕鼠。性格温婉。</p>
+                <a href="https://zhuanlan.zhihu.com/p/60194560">查看详情</a>
+            </div>
+        </div>
+        <video src="maomao.mp4" width="100%" height="400px" controls></video>
+		<video src="maomao1.mp4" width="100%" height="400px" controls></video>
+		<video src="maomao2.mp4" width="100%" height="400px" controls></video>
+	<footer>
+		<p>黄冈职业技术学院&copy;版权所有  Huanggang Polytechnic College   
+			地址：湖北省黄冈市黄州区南湖桃园街109号[438002]   制作维护：信息技术中心
+			鄂ICP备06007463号-1 鄂ICP备06007463号-2 鄂ICP备06007463号-3 鄂公网安备 42110202000100号
+			(素材来源于网络，如有侵权联系及删除！)
+			</p>
+	</footer>
+	<script>
+		// 焦点图自动播放
+		let sliderIndex = 0;
+		const sliderImgs = document.querySelectorAll('#slider img');
+		setInterval(() => {
+			sliderImgs[sliderIndex].classList.remove('active');
+			sliderIndex++;
+			if (sliderIndex >= sliderImgs.length) {
+				sliderIndex = 0;
+			}
+			sliderImgs[sliderIndex].classList.add('active');
+		}, 3000);
+    </script>
+</body>
+</html>
