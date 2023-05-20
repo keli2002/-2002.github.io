@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鼠标悬停时出现图片</title>
+</head>
+<body>
+    <style>
+   .hover-image {
+    display: inline-block;
+    position: relative;
+    }
+
+    .hover-image .image {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .hover-image:hover .image {
+        display: block;
+    }
+            </style>
+    <a href="#" class="hover-image">
+    这是一个链接
+    <img src="img/1.jpg" alt="图片" class="image">
+    </a>
+
+</body>
+</html>

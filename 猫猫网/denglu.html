@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>登录</title>
+    <link rel="stylesheet" href="dl.css">
+  </head>
+  <body background="img/jianbian.jpg">
+    <div class="box2">
+    <form>
+      <label for="new-username">用户名:</label>
+      <input type="text" id="new-username" name="new-username" placeholder="请输入用户名"><br><br>
+      <label for="new-password">密&nbsp;&nbsp;&nbsp;码:</label>
+      <input type="password" id="new-password" name="new-password" placeholder="请输入密码"><br><br>
+      <input type="submit" value="登录">
+      <p>没有账号？<a href="zhuche.html">立即注册</a></p>
+    </form>
+    </div>
+
+    <div id="floating-image">
+      <a href="ggwzz.html">
+      <img src="img/gg.jpg"></a>
+      <button onclick="hideImage()">×</button>
+    </div>
+    <script>
+      var image = document.getElementById('floating-image');
+      setInterval(function() {
+      var randomTop = Math.floor(Math.random() * window.innerHeight);
+      var randomLeft = Math.floor(Math.random() * window.innerWidth);
+      image.style.top = randomTop + 'px';
+      image.style.left = randomLeft + 'px';
+      }, 2000);
+      function hideImage() {
+      document.getElementById("floating-image").style.display = "none";
+      }
+    </script>
+
+     <footer>
+      <a href="index1.html">返回首页</a>
+    </footer> 
+  </body>
+</html>
